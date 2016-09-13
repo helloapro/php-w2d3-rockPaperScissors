@@ -14,8 +14,8 @@
     $app->post('/process', function() use ($app) {
         $input = $_POST['allergyScore'];
         $new_allergy = new Allergies;
-        $result = $new_allergy->checkAllergy($input);
-        
+        $result = explode(" ", $new_allergy->checkAllergy($input));
+
         return $app['twig']->render('results.html.twig', array('result'=>$result));
     });
 

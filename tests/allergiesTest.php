@@ -7,7 +7,7 @@
             $test_allergies = new Allergies;
             $input = 256;
             $output = $test_allergies->checkAllergy($input);
-            $this->assertEquals("Invalid allergy score!", $output);
+            $this->assertEquals(false, $output);
         }
 
         function test_allergies_cat()

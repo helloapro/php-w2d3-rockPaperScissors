@@ -11,7 +11,7 @@
             $runningScore = $score;
 
             if ($score > 255) {
-                return "Invalid allergy score!";
+                return [false];
             }
 
             for ($i = 0; $i < count($allergyCatalog); $i++) {
