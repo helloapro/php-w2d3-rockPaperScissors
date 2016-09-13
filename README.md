@@ -20,7 +20,7 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Specifications
 
-* User inputs the score of one specific allergy, and the application returns the one allergy associated.
+* User inputs the score of the largest-scored allergy, and the application returns the one allergy associated.
     * Input: allergies(128)
     * Output: cats
 

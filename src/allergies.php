@@ -10,8 +10,6 @@
             $myAllergies = array();
             $runningScore = $score;
 
-
-
             if ($score > 255) {
                 return "Invalid allergy score!";
             }
@@ -55,7 +53,7 @@
             //     array_push($myAllergies, "eggs");
             //     $runningScore -= 1;
             // }
-            
+
             return implode(" ", $myAllergies);
         }
 
