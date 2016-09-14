@@ -1,7 +1,7 @@
 <?php
     date_default_timezone_set('America/Los_Angeles');
     require_once __DIR__."/../vendor/autoload.php";
-    require_once __DIR__."/../src/allergies.php";
+    require_once __DIR__."/../src/RockPaperScissors.php";
 
     $app = new Silex\Application();
     $app['debug'] = true;
@@ -11,10 +11,10 @@
         return $app['twig']->render('home.html.twig');
     });
 
-    $app->post('/process', function() use ($app) {
+    $app->post('/results', function() use ($app) {
         $input = $_POST['allergyScore'];
-        $new_allergy = new Allergies;
-        $result = explode(" ", $new_allergy->checkAllergy($input));
+        $new_allergy = new RockPaperScissors;
+        $result = explode(" ", $new_allergy->checkRockPaperScissors($input));
 
         return $app['twig']->render('results.html.twig', array('result'=>$result));
     });
